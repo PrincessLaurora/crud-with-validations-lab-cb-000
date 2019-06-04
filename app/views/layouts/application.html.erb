@@ -12,6 +12,7 @@
 <% unless current_page?(controller: "songs", action: "index") %>
   <hr />
   <%= link_to "Songs List", songs_path %>
+  <%= javascript_include_tag 'application' %>
 <% end %>
 
 
