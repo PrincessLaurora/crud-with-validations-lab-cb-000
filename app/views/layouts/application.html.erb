@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>CrudWithValidationsLab</title>
+   <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,7 +13,6 @@
 <% unless current_page?(controller: "songs", action: "index") %>
   <hr />
   <%= link_to "Songs List", songs_path %>
-  <%= javascript_include_tag 'application' %>
 <% end %>
 
 
