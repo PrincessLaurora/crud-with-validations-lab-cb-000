@@ -27,10 +27,9 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-    @post.update(song_params)
-    if @post.valid?
-        @post.save
-        redirect_to post_path(@post)
+    @song.update(song_params)
+    if @song.save?
+        redirect_to song_path(@song)
       else
         render :edit
       end
@@ -39,7 +38,7 @@ class SongsController < ApplicationController
   private
 
  def song_params
-   params.permit(:title, :category, :content)
+   params.permit(:title, :relesead, :release_year, :artist_name, :genre)
  end
 end
 
