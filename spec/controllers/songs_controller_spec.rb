@@ -34,7 +34,7 @@ RSpec.describe SongsController, type: :controller do
     end
 
     it "fetches a song for editing" do
-      get :edit, { id: song.id }
+      get :edit, params: { id: song.id }
       expect(assigns(:song)).to eq(song)
     end
   end
