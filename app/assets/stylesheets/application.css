@@ -14,11 +14,13 @@
  *= require_self
  */
 
+ = require jquery
+ = require jquery_ujs
+ = require_tree .
+
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-//= require jquery
-//= require jquery_ujs
-//= require_tree . 
+ 
