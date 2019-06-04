@@ -57,7 +57,7 @@ RSpec.describe SongsController, type: :controller do
   end
 
   context "creating an invalid song" do
-    before { post(:create, { song: invalid_attributes}) }
+    before { post(:create, params: { song: invalid_attributes}) }
 
     it "has not been persisted" do
       expect(assigns(:song)).to be_new_record
