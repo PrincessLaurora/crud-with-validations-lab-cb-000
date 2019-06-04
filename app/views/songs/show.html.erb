@@ -6,9 +6,7 @@
 
     <h2>Genre:</h2>
     <%= @song.genre %>
-  </p>
-
-  <%= link_to 'Edit', edit_song_path(@song) %>
 
 
+<%= link_to 'Edit', edit_song_path(@song) %>
 <%= link_to 'Delete', song, method: :delete, data: { confirm: 'For real?' } %>
